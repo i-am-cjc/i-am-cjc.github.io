@@ -6,7 +6,7 @@
     <body>
     <div id="main">
         <h1><a href="/">cjc.im</a>
- / <a href="/posts">posts</a> / I trawled through the logs of the honeypot vps</h1><time class="post-date">May 05, 2015</time><p>As specified in the last post, I bought a VPS with the simple intention of letting it sit idle to see what (I can only guess) automated attempts at log in and access.</p>
+ / <a href="/posts">posts</a> / I trawled through the logs of the honeypot vps</h1><time class="post-date">May 03, 2015</time> <i><a href="/tag/infosec">infosec</a></i> <p>As specified in the last post, I bought a VPS with the simple intention of letting it sit idle to see what (I can only guess) automated attempts at log in and access.</p>
 <p>For this first little attempt, I left ssh running on the default port, and a bare httpd with no content to see what users attempted to log in, where from and what web addresses were attempted.</p>
 <h2>SSH login attempts</h2>
 <p>First off, lets look at the very predictable top 10 username attempts.</p>
@@ -41,7 +41,7 @@ The majority of the other addresses came from China. I have yet to really look u
 <li>Then we hit an interesting form of advertising, spamming my request logs with a domain name (obfuscated because fuck advertising for them) </li>
 <li>/manager/html is related to Tomcat, guessing there is enough exploits for this to be worth scanning for</li>
 </ul>
-<p>Interesting mention on the httpd logs was that there was 5 scans from masscan which is pretty cool. </p><strong>Tags: </strong><i><a href="/tag/infosec">infosec</a></i>         <br />
+<p>Interesting mention on the httpd logs was that there was 5 scans from masscan which is pretty cool. </p>        <br />
         <footer class="site-footer">
             <hr />
             <a href="mailto:carlREMOVE@THIScjc.im">email</a> - <a href="https://twitter.com/i_am_cjc">twitter</a>

@@ -6,7 +6,7 @@
     <body>
     <div id="main">
         <h1><a href="/">cjc.im</a>
- / <a href="/posts">posts</a> / ZICO2 VM Walkthrough</h1><time class="post-date">Jan 01, 2018</time><p>Another year, another boot2root VM to play. This time Zico2 from <a href="https://www.vulnhub.com/entry/zico2-1,210/">https://www.vulnhub.com/entry/zico2-1,210/</a></p>
+ / <a href="/posts">posts</a> / ZICO2 VM Walkthrough</h1><time class="post-date">Jan 01, 2018</time> <i><a href="/tag/infosec">infosec</a></i> <p>Another year, another boot2root VM to play. This time Zico2 from <a href="https://www.vulnhub.com/entry/zico2-1,210/">https://www.vulnhub.com/entry/zico2-1,210/</a></p>
 <p>I like these VMs when they have a theme, this one was of a sys admin who was testing some different CMS systems.</p>
 <p>As always, start with an nmap scan, we get ports ssh on port 22, a webserver on 80 and 111. As always with a webserver, we fire up dirb against it to see if there is anything interesting sticking around.</p>
 <p>We find /dbadmin which is very interesting, and this has a copy of <code>phpliteadmin</code> running which is vulnerable to an issue where you can name the database file whatever you want. See <a href="https://www.exploit-db.com/exploits/24044/">https://www.exploit-db.com/exploits/24044/</a> for more information on this vulnerability. This means that if we can include the file somehow, we can potentially perform a Local File Include (LFI) and execute some PHP!</p>
@@ -25,7 +25,7 @@
 <pre><code>sudo -u root zip todo.zip to_do.txt -T --TT="sh -c /bin/bash"
 </code></pre>
 <p>we are presented with a root shell and thus we are done!</p>
-<p>Happy New Year!!!</p><strong>Tags: </strong><i><a href="/tag/infosec">infosec</a></i>         <br />
+<p>Happy New Year!!!</p>        <br />
         <footer class="site-footer">
             <hr />
             <a href="mailto:carlREMOVE@THIScjc.im">email</a> - <a href="https://twitter.com/i_am_cjc">twitter</a>
