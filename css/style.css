@@ -18,6 +18,7 @@ body{
 	max-width: 600px;
 	text-align: left;
 	background-color:white;
+	line-height: 1.4em;
 }
 
 img, video{
@@ -28,4 +29,5 @@ img, video{
 code {
 	white-space: pre-wrap;
 	font-family: monospace;
+	line-height: 1.2em
 }
